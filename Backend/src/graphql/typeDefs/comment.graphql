@@ -1,0 +1,10 @@
+type Comment {
+  id: ID!
+  content: String!
+  reactions: [Reaction]
+  author: User!
+  article: Article!
+  createdAt: String!
+  updatedAt: String
+  replies: [Comment]
+}

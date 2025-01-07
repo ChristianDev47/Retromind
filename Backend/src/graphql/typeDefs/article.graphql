@@ -1,0 +1,14 @@
+type Article {
+  id: ID!
+  title: String!
+  content: String!
+  author: ID!
+  views: Int
+  visibility: String
+  categories: [ID]
+  likes: [User]
+  comments: [Comment]
+  sharedLink: String
+  createdAt: String!
+  updatedAt: String
+}

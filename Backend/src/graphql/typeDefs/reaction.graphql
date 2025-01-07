@@ -1,0 +1,4 @@
+type Reaction {
+  type: String!  
+  user: ID!
+}

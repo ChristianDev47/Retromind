@@ -1,0 +1,142 @@
+# Queries
+type Query {
+  # User
+  me: User
+  getUserStats: UserStats 
+  getFollowers: [User]  
+  getFollowing: [User]  
+
+  # Articles
+  getArticles( 
+    page: Int = 1, 
+    perPage: Int = 10, 
+    sortBy: String = "latest", 
+    visibility: String = "public", 
+    userId: ID, 
+    categoryId: ID 
+  ): [Article]
+  articlesCount(filter: String): Int
+  likesArticlesCount: Int!
+
+  # Comments 
+  getComments(articleId: ID!, page: Int = 1, perPage: Int = 10): [Comment]
+  commentsCount(articleId: ID!): Int!
+  commentReactionCount(articleId: ID!): Int!
+
+  # Categories
+  getCategories: [Category]
+}
+
+
+# Mutations
+type Mutation {
+  # User
+  createUser(
+    name: String!
+    surname: String!
+    email: String!
+    password: String!
+    bio: String!
+    profile_picture: String
+    createdAt: String
+    updatedAt: String
+  ): User
+
+  updateUser(
+    id: ID!
+    name: String
+    surname: String
+    email: String
+    password: String
+    bio: String
+    profile_picture: String
+  ): User
+
+  deleteUser(
+    id: ID!
+    password: String
+  ): Boolean
+
+  login(
+      email: String!
+      password: String!
+  ): Token
+
+  # Article
+  createArticle(
+    title: String!
+    content: String!
+    categories: [ID]!
+    visibility: String
+  ): Article
+
+  updateArticle(
+    id: ID!
+    title: String
+    content: String
+    categories: [ID]
+  ): Article
+
+  deleteArticle(
+    id: ID!
+  ): Boolean
+
+  updateArticleVisibility(
+    id: ID!, 
+    visibility: String!
+  ): Article
+  
+  toggleLikeArticle(
+    articleId: ID!
+  ): Article
+
+  # Comment
+  addComment(
+    articleId: ID!
+    content: String!
+  ): Comment
+
+  updateComment(
+    id: ID!
+    content: String!
+  ): Comment
+
+  deleteComment(
+    id: ID!
+  ): Boolean
+
+  addReactionToComment(
+    commentId: ID!
+    reactionType: String!
+  ): Reaction
+
+  removeReactionFromComment(
+    commentId: ID!
+  ): Boolean
+
+  # Category
+  createCategory(
+    name: String!
+  ): Category
+
+  updateCategory(
+    id: ID!
+    name: String!
+  ): Category
+  
+  deleteCategory(
+    categoryId: ID!
+  ): Boolean
+}
+
+# Subscriptions
+type Subscription {
+  # Articles 
+  articleUpdated(articleId: ID!): Article
+  articleLikeCountUpdated(articleId: ID!): Int!
+
+  # Cooments
+  newComment(articleId: ID!): Comment
+  newCommentReply(commentId: ID!): Comment
+  commentReactionUpdated(commentId: ID!): Reaction
+}

@@ -1,0 +1,27 @@
+type User {
+  id: ID!
+  name: String!
+  surname: String!
+  email: String!
+  password: String!
+  bio: String!
+  profile_picture: String
+  articles: [Article]
+  following: [User]
+  followers: [User]
+  verified: Boolean
+  access_token: String
+  createdAt: String
+  updatedAt: String
+}
+
+type UserStats {
+  articlesCount: Int
+  followersCount: Int
+  followedCount: Int
+  favoritesArticlesCount: Int
+}
+
+type Token {
+  value: String
+}

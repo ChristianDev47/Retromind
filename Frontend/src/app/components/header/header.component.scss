@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Ancient";
+  src: url("/fonts/Ancient.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  font-family:  'Roboto', 'Segoe UI', 'Arial', 'sans-serif';
+}
+
+nav {
+  width: 42rem;
+}
+
+nav .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 22px;
+  color: whitesmoke;
+}
+
+nav .logo img {
+  width: 28px;
+  margin: 0 5px 0 0;
+}

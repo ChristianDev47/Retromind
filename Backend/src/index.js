@@ -8,7 +8,7 @@ import typeDefs from "./graphql/typeDefs/index.js";
 
 
 // Templates views
-// https://reiro.fueko.net/every-day-in-every-city-and-town-across-the-country/
+// https://reiro.fueko.net/every-day-in-every-city-and-town-across-thue-country/
 // https://preview.themeforest.net/item/maktub-minimal-lightweight-blog-for-wordpress/full_screen_preview/38348402?_ga=2.144786355.640238233.1732316688-1199551131.1718147491
 // https://themeger.shop/wordpress/katen/
 

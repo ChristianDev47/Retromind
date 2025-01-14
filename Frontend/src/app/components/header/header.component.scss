@@ -4,23 +4,46 @@
   font-display: swap;
 }
 
-* {
-  font-family:  'Roboto', 'Segoe UI', 'Arial', 'sans-serif';
+html {
+  font-family: 'Ancient', 'Roboto', 'Segoe UI', 'Arial', 'sans-serif';
 }
 
-nav {
-  width: 42rem;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: gainsboro;
+  align-items: start;
+  padding: 1rem 5rem 1rem 5rem;
 }
 
-nav .logo {
+.logo {
+  width: 180px;
   display: flex;
   justify-content: start;
-  align-items: center;
-  font-size: 22px;
-  color: whitesmoke;
+  gap: .5rem;
+  font-size: 18px;
 }
 
-nav .logo img {
-  width: 28px;
-  margin: 0 5px 0 0;
+p {
+  margin: 0;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.navigation{
+  display : flex;
+  width: 100%;
+  justify-content: center;
+  width: 100%;
+  gap: 5rem;
+}
+
+button {
+  padding: 8px 20px 8px 20px;
+  background: gainsboro;
+  color: black;
+  border-radius: 10px;
 }

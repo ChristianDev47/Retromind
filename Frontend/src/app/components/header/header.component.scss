@@ -12,12 +12,12 @@ html {
   display: flex;
   justify-content: space-between;
   color: gainsboro;
-  align-items: start;
+  align-items: center;
   padding: 1rem 5rem 1rem 5rem;
 }
 
 .logo {
-  width: 180px;
+  width: 252px;
   display: flex;
   justify-content: start;
   gap: .5rem;
@@ -42,8 +42,40 @@ img {
 }
 
 button {
-  padding: 8px 20px 8px 20px;
+  width: 100px;
+  padding: 8px 10px 8px 10px;
   background: gainsboro;
   color: black;
   border-radius: 10px;
+  margin-left: .5rem;
+  animation-duration: 200s;
+  animation: ease-in-out;
+  border-color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+}
+.search {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+input {
+  padding: 0 0 5px 0;
+  background: transparent;
+  outline: none;
+  color: white;
+  border-width: 0 0 1px 0;
+  border-color: white;
 }

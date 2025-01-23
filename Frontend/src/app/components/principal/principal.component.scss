@@ -1,0 +1,54 @@
+.principal {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(5);
+  padding: 2rem 5rem;
+  gap: 2rem;
+}
+
+.options {
+  grid-column: 2;
+
+}
+
+.publications {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.post .image {
+  height: 140px;
+  width: 290px;
+  background: white;
+}
+
+h2{
+  margin: 0;
+}
+
+h1{
+  margin: 0 0 2rem 0;
+}
+
+.recent {
+  font-size: 12px;
+}
+
+.recent .post .image {
+  height: 50px;
+  width: 40px;
+  background: white;
+}
+
+.categories h1{
+  margin: 0;
+}
